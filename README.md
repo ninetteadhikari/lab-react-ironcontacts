@@ -76,7 +76,7 @@ This is what you may have at the end of this iteration:
 ![Screenshot](https://i.imgur.com/vUDGZ7Y.png)
 
 
-### Iteration 4 | Remove Contacts
+### Iteration 4 | Bonus | Remove Contacts
 
 The producer also would like to remove some of their contacts. Implement a *Delete* button on each row of your `<table>` that will let the user remove the contact they clicked.
 
@@ -86,10 +86,6 @@ At the end of this iteration, your app may look like this (after playing a littl
 
 ![Screenshot](https://i.imgur.com/N3K1K1k.png)
 
-
-### Iteration 5 | Bonus | Styling
-
-Unfortunately, this contact list isn't production ready. This is the movie business! It has to sparkle! Add some beautiful CSS to make the app "pop". 
 
 
 Happy coding! :heart:
