@@ -4,12 +4,12 @@ import Contact from "./Contact";
 
 class ContactList extends Component {
   state = {
-    contact: contacts.slice(0, 5)
+    contact: [...contacts].slice(0, 5)
   };
 
   addRandom = () => {
     const randomIndex = Math.floor(Math.random() * 199);
-    const newContact = contacts[randomIndex];
+    const newContact = [...contacts][randomIndex];
 
     this.setState({
       contact: this.state.contact.concat(newContact)
@@ -19,7 +19,7 @@ class ContactList extends Component {
   };
 
   sortName = () => {
-    const sortedContact = this.state.contact.sort((a, b) => {
+    const sortedContact = [...this.state.contact].sort((a, b) => {
       return a.name.localeCompare(b.name);
     });
 
@@ -29,12 +29,12 @@ class ContactList extends Component {
   };
 
   sortPopularity =()=>{
-      const sotedPopularity = this.state.contact.sort((a,b)=>{
+      const sortedPopularity = [...this.state.contact].sort((a,b)=>{
           return a.popularity - b.popularity
       });
 
       this.setState({
-          contact: sotedPopularity
+          contact: sortedPopularity
       })
 
   }
