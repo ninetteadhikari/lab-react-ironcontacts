@@ -6,21 +6,30 @@ class Contact extends Component {
   };
 
   deleteState = e => {
-
     console.log(this.props.contact.indexOf(e))
     // let deleteContact=[]
-    this.props.contact.slice().map((el, index, arr) => {
-      let deleteIndex = this.props.contact.indexOf(e)
-      if (deleteIndex !== 1) {
-        arr.splice(deleteIndex, 1);
+
+    let deleteIndex = this.props.contact.indexOf(e)
+    let newArr=[...this.props.contact]
+      if (deleteIndex !== -1) {
+        newArr.splice(deleteIndex, 1);
+        console.log(newArr)
         this.setState({
-          contact: arr
+          contact: newArr
         });
-        // console.log(deleteContact)
-      }
+    // this.props.contact.slice().map((el, index, arr) => {
+    //   let deleteIndex = this.props.contact.indexOf(e)
+    //   if (deleteIndex!== -1) {
+    //     arr.splice(deleteIndex, 1);
+    //     this.setState({
+    //       contact: arr
+    //     });
+    //     // console.log(deleteContact)
+    //   }
 
-     });
+    //  });
 
+  }
   }
 
   render() {
@@ -43,6 +52,7 @@ class Contact extends Component {
   }
 }
 
+  
 export default Contact;
 
 // import React from 'react'
